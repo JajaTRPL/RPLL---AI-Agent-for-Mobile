@@ -79,3 +79,9 @@ Ketentuan:
 
 Gate: laporan Lighthouse di Chrome DevTools (Performance dan Accessibility
 >= 90) + semua tes tetap lulus.
+
+Hasil (2026-11-02, `npm run preview`, Lighthouse 12 mode Mobile):
+Performance 100, Accessibility 100, Best Practices 100. Tidak ada temuan di
+bawah 90; satu saran tersisa (CSS render-blocking, estimasi 150 ms) tidak
+memengaruhi skor. Lebar 360 px tanpa horizontal scroll dan semua area sentuh
+>= 44 x 44 px, di mode terang dan gelap.
