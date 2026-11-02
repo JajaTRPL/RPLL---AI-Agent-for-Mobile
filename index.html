@@ -15,8 +15,12 @@
     <main class="app-main">
       <section id="list-view" aria-labelledby="list-heading">
         <h2 id="list-heading" class="visually-hidden">Daftar catatan</h2>
+        <div class="search-field">
+          <label for="search-input">Cari</label>
+          <input id="search-input" type="search" autocomplete="off" placeholder="Cari judul atau isi" />
+        </div>
         <button type="button" id="add-button" class="button button-primary">Tambah catatan</button>
-        <p id="empty-message" class="empty-message" hidden>Belum ada catatan.</p>
+        <p id="empty-message" class="empty-message" role="status" hidden></p>
         <ul id="note-list" class="note-list"></ul>
       </section>
 

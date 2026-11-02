@@ -103,6 +103,16 @@ textarea:focus-visible {
   outline-offset: 2px;
 }
 
+.search-field {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.search-field label {
+  font-weight: 600;
+}
+
 #add-button {
   width: 100%;
 }
@@ -161,6 +171,7 @@ textarea:focus-visible {
   font-weight: 600;
 }
 
+.search-field input,
 .editor-form input,
 .editor-form textarea {
   width: 100%;
