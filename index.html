@@ -1,13 +1,43 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>notes-app</title>
+    <meta name="description" content="Aplikasi catatan cepat untuk HP yang tetap bisa dipakai saat offline." />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <title>Catatan</title>
   </head>
   <body>
-    <div id="app"></div>
+    <header class="app-header">
+      <h1>Catatan</h1>
+    </header>
+
+    <main class="app-main">
+      <section id="list-view" aria-labelledby="list-heading">
+        <h2 id="list-heading" class="visually-hidden">Daftar catatan</h2>
+        <button type="button" id="add-button" class="button button-primary">Tambah catatan</button>
+        <p id="empty-message" class="empty-message" hidden>Belum ada catatan.</p>
+        <ul id="note-list" class="note-list"></ul>
+      </section>
+
+      <section id="editor-view" aria-labelledby="editor-heading" hidden>
+        <h2 id="editor-heading" class="editor-heading">Catatan baru</h2>
+        <form id="editor-form" class="editor-form">
+          <label for="note-title">Judul</label>
+          <input id="note-title" name="title" type="text" autocomplete="off" />
+
+          <label for="note-body">Isi</label>
+          <textarea id="note-body" name="body" rows="8"></textarea>
+
+          <div class="editor-actions">
+            <button type="submit" class="button button-primary">Simpan</button>
+            <button type="button" id="cancel-button" class="button">Batal</button>
+            <button type="button" id="delete-button" class="button button-danger" hidden>Hapus</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
