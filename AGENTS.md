@@ -11,4 +11,10 @@
 6. Akhiri dengan ringkasan: file yang diubah dan hasil tes.
 ## Gaya kode
 - JavaScript modern (ES modules), tanpa framework.
-- Nama fungsi dan variabel dalam English
+- Nama fungsi dan variabel dalam English.
+
+## Pelajaran dari work order sebelumnya
+- Cek setiap layar di lebar 360 px sebelum selesai.
+- Semua tombol harus punya teks atau aria-label (accessibility).
+- Tes offline hanya memeriksa heading. Pastikan juga JS, CSS, dan catatan tetap jalan saat offline (WO-4: aset build harus ikut di-cache).
+- Service worker hanya didaftarkan di build produksi; uji fitur offline dengan npm run build + npm run preview, bukan npm run dev.
