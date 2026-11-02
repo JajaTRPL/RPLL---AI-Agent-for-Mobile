@@ -87,3 +87,8 @@ deleteButton.addEventListener("click", () => {
 });
 
 renderList();
+
+// Service worker hanya di build produksi, agar dev server tidak ter-cache
+if ("serviceWorker" in navigator && import.meta.env.PROD) {
+  navigator.serviceWorker.register("./sw.js");
+}
