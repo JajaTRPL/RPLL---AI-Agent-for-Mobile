@@ -7,6 +7,7 @@ const listView = document.querySelector("#list-view");
 const editorView = document.querySelector("#editor-view");
 const noteList = document.querySelector("#note-list");
 const emptyMessage = document.querySelector("#empty-message");
+const searchInput = document.querySelector("#search-input");
 const editorHeading = document.querySelector("#editor-heading");
 const editorForm = document.querySelector("#editor-form");
 const titleInput = document.querySelector("#note-title");
@@ -18,8 +19,10 @@ const deleteButton = document.querySelector("#delete-button");
 let editingId = null;
 
 function renderList() {
-  const notes = store.list();
+  const query = searchInput.value;
+  const notes = store.search(query);
   noteList.replaceChildren(...notes.map(renderNoteItem));
+  emptyMessage.textContent = query.trim() ? "Tidak ada catatan yang cocok." : "Belum ada catatan.";
   emptyMessage.hidden = notes.length > 0;
 }
 
@@ -62,6 +65,7 @@ function closeEditor() {
   addButton.focus();
 }
 
+searchInput.addEventListener("input", renderList);
 addButton.addEventListener("click", () => openEditor());
 cancelButton.addEventListener("click", closeEditor);
 
