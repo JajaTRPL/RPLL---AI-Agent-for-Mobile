@@ -3,9 +3,8 @@
 Aplikasi catatan cepat untuk HP yang tetap bisa dipakai saat offline.
 ## Features
 - Tambah, edit, dan hapus catatan (judul + isi)
-Factory Model · Notes App di VS Code
-Halaman 3 dari 9
-- Cari catatan berdasarkan teks di judul atau isi - Bisa dibuka offline dan ditambahkan ke home screen (PWA)
+- Cari catatan berdasarkan teks di judul atau isi
+- Bisa dibuka offline dan ditambahkan ke home screen (PWA)
 ## Mobile
 - Rapi di layar selebar 360 px, tanpa horizontal scroll
 - Tombol dan area sentuh minimal 44 x 44 px
